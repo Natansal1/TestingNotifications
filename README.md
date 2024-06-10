@@ -8,6 +8,7 @@ This README will guide you through setting up and running the project on your lo
 - [Quick Start](#quick-start)
 - [Syncing Java Files with Android Studio](#syncing-java-files-with-android-studio)
 - [Running the App](#running-the-app)
+- [Editing Java files](#editing-java-files)
 
 ## Prerequisites
 
@@ -79,6 +80,13 @@ npm run sync
 3. Run the app on a connected device.
 
 Now, your app should be up and running, and you can start developing and testing all features!
+
+## Editing JAVA Files
+
+Go to the `push-notifications` directory
+Then `/android/src/main/java/com/hilma/plugin`
+and there you'll find all the Java files in use. You may edit them as you with
+**Don't forget - inorder to sync the changes with Android-Studio please run `npm run sync`**
 
 ## Contributing
 
