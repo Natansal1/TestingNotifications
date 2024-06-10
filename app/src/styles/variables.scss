@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap");
+
+// COLORS
+$blurBlackishBackground: rgba(128, 133, 106, 0.08);
+$loginInputBackgroundColor: rgba(255, 255, 255, 0.5);
+$loginInputBorderColor: rgba(0, 0, 0, 0.3);
+$newAdminCrisisButtonBorder: #dccac661;
+$switchTrackBackgroundColor: #3e3e3e3d;
+$sideBarBlackishBackground: #00000065;
+$transparentOrangeYellow: #d5861c58;
+$faded-black: rgba(0, 0, 0, 0.497);
+$pendingGray: rgb(197, 193, 193);
+$grayBrownBackground: #80856a42;
+$really-faded-black: #00000017;
+$blackishBackground: #80856a40;
+$backgroundColorLight: #ebebeb;
+$darkedBlackShadow: #00000045;
+$almost-clear-grey: #3e3e3e17;
+$grayInputBackground: #f5f5f5;
+$blackDarkOpacity: #000000af;
+$backgroundColor: #80856a3d;
+$inputBackground: #80856a19;
+$sortBlackBorder: #7070701a;
+$secondBtnBGColor: #fbb45f;
+$sortBlackFont: #5d5d5dbf;
+$redButtonBorder: #9d6644;
+$background-grey: #ece8e3;
+$faded-orange: #d5851c2d;
+$grayBackground: #f3f3f3;
+$lighterGreen: #72924aaa;
+$faded-green: #80856a3a;
+$blackShadow: #00000029;
+$faded-brown: #ab704b4f;
+$blackBorder: #28282861;
+$orangeYellow: #d5861c;
+$lightBrown: #ab704b80;
+$lightGray: #80856a25;
+$sortOfBlack: #424242;
+$grayBorder: #d1d1d1;
+$creamWhite: #efeae4;
+$faded-grey: #cbcbcb;
+$grayBrown: #80856a;
+$orange: #d17600;
+$brown: #ab6f4b;
+$green: #5e6f49;
+$grey: #e7e7e7;
+$blue: #3390ec;
+
+// FONTS
+$mainFontFamily: "Assistant", sans-serif;
+
+// SHADOWS
+$headersBoxShadow: 0px 3px 6px $blackShadow;
+
+//OTHER
+$inset-top: env(safe-area-inset-top);
+$inset-top-view-port: $inset-top / 100;
+
+@function vh($number) {
+  @return calc($number * (1vh - $inset-top-view-port));
+}
+
+@function top($number) {
+  @return calc($number + $inset-top);
+}
+
+$header-height: max(calc(52px + $inset-top), calc(vh(7.8125) + $inset-top));
+$taller-header-height: max(calc(67px + $inset-top), calc(vh(10) + $inset-top));
+$header-inner-height: max(52px, vh(7.8125));
+$nav-bar-height: vh(12.5);

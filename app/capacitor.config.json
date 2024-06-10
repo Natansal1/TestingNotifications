@@ -1,0 +1,20 @@
+{
+  "appId": "com.notification_test.com",
+  "appName": "app",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    },
+    "HilmaPushNotifications": {
+      "defaultRingtoneFileName": "megilot",
+      "defaultVolume": 100,
+      "defaultOverrideSilentEnabled": true,
+      "lights": ["FFFFF", "300", "100"],
+      "vibrationPattern": ["1000", "500", "1000", "500"]
+    },
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}

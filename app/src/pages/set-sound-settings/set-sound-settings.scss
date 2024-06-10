@@ -1,0 +1,211 @@
+@import "../../styles/variables.scss";
+
+.sound_settings_page {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh 3vw 0 3vw;
+
+  .sound_settings {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .segment_wrapper {
+      width: 100%;
+      margin-bottom: 1vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      background-color: white;
+      flex: 0.26;
+
+      &.segment_wrapper_large {
+        flex: 0.35;
+        padding: min(4.722vw, 2.6565vh);
+      }
+
+      &.segment_wrapper_row {
+        flex: 0.25;
+        flex-direction: row;
+      }
+    }
+  }
+
+  .setting_label {
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    padding: 2vh 0 0 0;
+  }
+
+  .setting_label_large {
+    font-size: 1.2rem;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sound_select {
+    background-color: white;
+    font-family: $mainFontFamily;
+    width: 100%;
+    font-weight: 600;
+    border-radius: 6px;
+
+    .MuiSelect-select {
+      padding: 10px 10px 10px 30px;
+    }
+
+    .MuiSvgIcon-root {
+      right: auto;
+      left: 7px;
+    }
+  }
+
+  .audio_player {
+    margin-top: 2vh;
+    width: 100%;
+  }
+
+  .slider_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 4.5vh 0;
+
+    .volume_slider {
+      width: calc(100% - 3.4rem - 5vw);
+
+      .MuiSlider-rail {
+        background-color: $brown;
+      }
+
+      .MuiSlider-track {
+        background-color: $faded-grey;
+        border: none;
+      }
+
+      .MuiSlider-thumb {
+        color: $brown;
+        box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.14);
+
+        &.Mui-active {
+          box-shadow: 0 0 0 14px $faded-brown;
+        }
+      }
+
+      .MuiSlider-valueLabelOpen,
+      .MuiSlider-valueLabel {
+        border-radius: 20px;
+        opacity: 0.95;
+        font-family: $mainFontFamily;
+        font-weight: 600;
+        background-color: $brown;
+      }
+    }
+
+    .volume_slider_icon {
+      transform: rotateZ(180deg);
+      font-size: 1.7rem;
+      color: $brown;
+    }
+  }
+
+  .sound_settings .override_switch_container {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  .silent_mode_radio_btns {
+    margin-right: -12vw;
+
+    .MuiSvgIcon-fontSizeMedium {
+      color: $brown;
+    }
+  }
+
+  // working switch css, doesnt used in this file
+  .sound_switch {
+    height: max(30px, 4.6875vh);
+    width: max(63px, 17.5vw);
+    border-radius: 100vh;
+    transform: rotateZ(180deg);
+    padding: 0;
+
+    .MuiSwitch-switchBase {
+      height: 100%;
+      padding: 4px;
+    }
+
+    .Mui-checked {
+      transform: translateX(calc(max(63px, 17.5vw) - min(24px, 6.666vw) - 8px));
+    }
+
+    .MuiSwitch-thumb {
+      height: min(24px, 6.666vw);
+      width: min(24px, 6.666vw);
+      color: white;
+      opacity: 0.5;
+    }
+
+    .Mui-checked + .MuiSwitch-track {
+      background-color: $brown;
+      opacity: 1;
+    }
+
+    .Mui-checked .MuiSwitch-thumb {
+      opacity: 1;
+    }
+  }
+
+  .segment_wrapper.test_notification_container {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sound_settings .problem_message_container {
+    flex-grow: 0;
+    padding: 0;
+    background-color: transparent;
+
+    .problem_message {
+      text-align: center;
+      color: $green;
+      background-color: transparent;
+      border: none;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .segment_wrapper {
+    justify-content: space-between;
+    padding: 0 4.72vw;
+  }
+
+  .main_divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(black, 0.3);
+  }
+
+  .send_notification_btn {
+    font-size: 1rem;
+    min-width: 60vw;
+    font-family: $mainFontFamily;
+    text-decoration: underline;
+    color: rgba(black, 0.5);
+  }
+}

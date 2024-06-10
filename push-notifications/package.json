@@ -1,0 +1,73 @@
+{
+  "name": "@hilma/push-notifications",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.2.1",
+  "description": "A PushNotifications Plugin, meant to work with @capacitor/PushNotifications and @capacitor-community/fcm. adds the option to override silent mode, set volume from the client side and more.",
+  "main": "dist/plugin.cjs.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "unpkg": "dist/plugin.js",
+  "files": [
+    "android/src/main/",
+    "android/build.gradle",
+    "dist/"
+  ],
+  "author": "NatanSal1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hilma-tech/hilma-push-notifications.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hilma-tech/hilma-push-notifications.git/issues"
+  },
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native",
+    "push-notifications",
+    "silent mode",
+    "do-not-disturb"
+  ],
+  "scripts": {
+    "verify": "npm run verify:android",
+    "verify:android": "cd android && ./gradlew clean build test && cd ..",
+    "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
+    "docgen": "docgen --api HilmaPushNotificationsPlugin --output-readme README.md --output-json dist/docs.json",
+    "build": "npm run clean && tsc && rollup -c rollup.config.js",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^5.0.0",
+    "@capacitor/core": "^5.0.0",
+    "@capacitor/docgen": "^0.2.2",
+    "@capacitor/ios": "^5.0.0",
+    "@ionic/prettier-config": "^1.0.1",
+    "prettier": "~2.3.0",
+    "prettier-plugin-java": "~1.0.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.32.0",
+    "typescript": "~4.1.5"
+  },
+  "peerDependencies": {
+    "@capacitor/core": "^5.0.0"
+  },
+  "prettier": "@ionic/prettier-config",
+  "eslintConfig": {
+    "extends": "@ionic/eslint-config/recommended"
+  },
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "dependencies": {
+    "@capacitor/push-notifications": "^5.1.1"
+  }
+}
