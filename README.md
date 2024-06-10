@@ -85,7 +85,7 @@ Now, your app should be up and running, and you can start developing and testing
 
 Go to the `push-notifications` directory
 Then `/android/src/main/java/com/hilma/plugin`
-and there you'll find all the Java files in use. You may edit them as you with
+and there you'll find all the Java files in use. You may edit them as you wish <br>
 **Don't forget - inorder to sync the changes with Android-Studio please run `npm run sync`**
 
 ## Contributing
