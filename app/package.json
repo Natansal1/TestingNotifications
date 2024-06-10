@@ -1,0 +1,45 @@
+{
+  "name": "capacitor-app",
+  "version": "1.0.0",
+  "description": "An Amazing Capacitor App",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "capacitor",
+    "mobile"
+  ],
+  "scripts": {
+    "start": "vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync": "npm i ../push-notifications; vite build; cap sync"
+  },
+  "dependencies": {
+    "@capacitor-community/fcm": "^6.0.0",
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/camera": "latest",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/push-notifications": "^6.0.0",
+    "@capacitor/splash-screen": "latest",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@hilma/push-notifications": "file:../push-notifications",
+    "@hilma/tools": "^1.1.0",
+    "@mui/icons-material": "^5.15.19",
+    "@mui/material": "^5.15.19",
+    "@vitejs/plugin-react": "^4.3.1",
+    "axios": "^1.7.2",
+    "clsx": "^2.1.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "ts-node": "^10.9.2",
+    "vite": "^5.2.13"
+  },
+  "author": "",
+  "license": "ISC"
+}

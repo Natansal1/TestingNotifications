@@ -1,0 +1,57 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.hilma.plugin" >
+4
+5    <uses-sdk android:minSdkVersion="22" />
+6
+7    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+7-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:3:5-77
+7-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:3:22-74
+8    <uses-permission android:name="com.google.firebase.MESSAGING_PERMISSION" />
+8-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:4:5-80
+8-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:4:22-77
+9
+10    <application>
+10-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:6:5-28:19
+11        <service
+11-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:7:9-15:19
+12            android:name="com.hilma.plugin.ModifiedFirebaseService"
+12-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:8:13-52
+13            android:directBootAware="true"
+13-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:11:13-43
+14            android:enabled="true"
+14-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:9:13-35
+15            android:exported="false" >
+15-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:10:13-37
+16            <intent-filter>
+16-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:12:13-14:29
+17                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+17-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:13:17-78
+17-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:13:25-75
+18            </intent-filter>
+19        </service>
+20
+21        <receiver
+21-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:17:9-26:20
+22            android:name="com.hilma.plugin.BootReceiver"
+22-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:18:13-41
+23            android:directBootAware="true"
+23-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:21:13-43
+24            android:enabled="true"
+24-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:19:13-35
+25            android:exported="false" >
+25-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:20:13-37
+26            <intent-filter>
+26-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:22:13-25:29
+27                <action android:name="android.intent.action.BOOT_COMPLETED" />
+27-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:23:17-78
+27-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:23:25-76
+28
+29                <category android:name="android.intent.category.DEFAULT" />
+29-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:24:17-75
+29-->/home/natan/Documents/Projects/TestNotifications/push-notifications/android/src/main/AndroidManifest.xml:24:27-73
+30            </intent-filter>
+31        </receiver>
+32    </application>
+33
+34</manifest>
