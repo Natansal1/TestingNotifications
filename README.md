@@ -69,7 +69,7 @@ Follow these steps to get the project up and running:
 In order to sync between Android Studio and the changed Java files, run the following command in the app directory:
 
 ```sh
-npx cap sync
+npm run sync
 ```
 
 ## Running the App
